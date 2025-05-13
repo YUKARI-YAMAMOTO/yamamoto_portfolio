@@ -1,0 +1,444 @@
+@charset "uft-8";
+.header__group {
+    position: relative;
+}
+.header__inner {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 75px;
+    background-color: #fff;
+    z-index: 9000;
+}
+.header__title {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    font-size: 84px;
+    font-weight: 800;
+    line-height: 1.19;
+    letter-spacing: -12px;
+}
+.header__left {
+    position: fixed;
+    top: 22px;
+    left: 35px;
+    display: flex;
+}
+.header__left p {
+    font-size: 22px;
+    line-height: 1.81;
+    color: #fe2e35;
+}
+.header__left span {
+    font-weight: 700;
+}
+/* ナビゲーションメニュー */
+.menu {
+    display: none;
+}
+.menu ul {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: center;
+    margin-top: 128px;
+    gap: 117px;
+}
+
+/* タイトルにつけるチューリップのアイコン */
+.menu img {
+    width: 43px;
+    height: 133px;
+}
+/* メニュータイトルの文字 */
+.menu p {
+    font-size: 35px;
+    line-height: 1.77;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+.menu {
+    position: absolute;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcebec;
+}
+.hamburger {
+    display: block;
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    cursor: pointer;
+    background-color: #fe2e35;
+    text-align: center;
+    align-content: center;
+}
+.hamburger-text p {
+    font-size: 18px;
+    color: #fff;
+}
+.hamburger-text span:nth-of-type(1),
+.hamburger-text span:nth-of-type(2) {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    vertical-align: middle;
+    width: 34px;
+    height: 2px;
+    color: #fff;
+    transition: 0.4s;
+}
+.hamburger-text span:nth-of-type(2) {
+    bottom: 0;
+    top: auto;
+}
+/* .hamburger-text span:nth-of-type(1) {
+    top: -15px;
+}
+.hamburger-text span:nth-of-type(2) {
+    bottom: -15px;
+} */
+/* openがついたときにＸにする */
+.open span {
+    background-color: transparent;
+}
+.open span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0;
+}
+.open span:nth-of-type(2) {
+    transform: rotate(-45deg);
+    bottom: 0;
+}
+.main-visual {
+    display: flex;
+    justify-content: flex-end;
+    margin: 180px 75px auto auto;
+}
+
+.main-visual img {
+    width: 70%;
+}
+
+/* セクションタイトル */
+.section__title {
+    display: flex;
+}
+.section__title img {
+    width: 43px;
+    height: 133px;
+    padding-left: 16px;
+}
+.section__title p {
+    font-size: 100px;
+    line-height: 1.75;
+}
+.row {
+    margin: 0 auto;
+    padding: 50px 50px 150px;
+    max-width: 1000px;
+}
+/* CONCEPT */
+.concept__group {
+    display: flex;
+}
+.concept__subtitle h3 {
+    font-size: 40px;
+    line-height: 1.5;
+}
+.concept__text {
+    padding-left: 40px;
+}
+.concept__text h4 {
+    font-size: 26px;
+    line-height: 1.8;
+}
+.concept__text p {
+    font-size: 23px;
+    line-height: 2;
+    padding-top: 38px;
+}
+/* WORKS */
+.works__group a {
+    display: flex;
+}
+.works__group {
+    padding-top: 80px;
+}
+.works__group li {
+    padding-bottom: 50px;
+}
+.works__group img {
+    width: 318px;
+    height: 338px;
+}
+.works__item {
+    width: 642px;
+    height: 338px;
+    margin: 0 0 0 auto;
+}
+.works__text {
+    width: 324px;
+    height: 338px;
+    background-color: #fe2e35;
+    position: relative;
+}
+.works__text p {
+    font-size: 20px;
+    line-height: 1.75px;
+    color: #fff;
+}
+.works__title {
+    position: absolute;
+    top: 13%;
+    left: 14%;
+}
+
+.works__title p {
+    white-space: pre-wrap;
+}
+
+.works__more {
+    position: absolute;
+    bottom: 30px;
+    right: 16px;
+}
+.btn-works {
+    width: 134px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #fe2e35;
+    text-align: center;
+    align-content: center;
+    color: #fff;
+}
+.white-works {
+    background-color: white;
+    border: 1px solid #000;
+    color: #000;
+}
+
+/* SKILL */
+.section-skill {
+    display: flex;
+}
+.skill__group {
+    margin-top: 80px;
+    margin-left: 30px;
+}
+.skill__group ul {
+    padding-bottom: 54px;
+}
+.skill__group li {
+    display: flex;
+}
+.skill__type h3 {
+    font-size: 40px;
+    line-height: 1.2;
+    padding-bottom: 16px;
+}
+.skill__type p {
+    font-size: 16px;
+    line-height: 1.18;
+    align-content: center;
+}
+.skill__type {
+    gap: 16px;
+}
+.skill__item p {
+    width: 136px;
+    font-size: 28px;
+    line-height: 1.2;
+}
+.skill__item {
+    gap: 70px;
+}
+
+/* SERVICE */
+.service__subtitle h3 {
+    font-size: 16px;
+    line-height: 2.13;
+}
+.service__text ul {
+    padding-top: 80px;
+    padding-left: 350px;
+}
+.service__text li {
+    display: flex;
+    padding-bottom: 80px;
+}
+.service__text img {
+    width: 140px;
+    height: 184px;
+}
+.service__text p {
+    font-size: 18px;
+    line-height: 1.77;
+    padding-left: 60px;
+    align-content: center;
+}
+
+/* CONTACT */
+#CONTACT {
+    background-color: #eed8c8;
+}
+.contact__subtitle h3 {
+    font-size: 19px;
+    line-height: 2.1;
+}
+.contact__text {
+    padding: 0 10%;
+}
+.contact__type {
+    font-size: 18px;
+    line-height: 2.2;
+    padding-top: 50px;
+}
+.contact__name,
+.contact__e-mail {
+    width: 800px;
+    height: 72px;
+    font-size: 20px;
+    line-height: 2;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #457d2e;
+    align-content: center;
+    padding-left: 10px;
+}
+.contact__message {
+    width: 800px;
+    height: 184px;
+    font-size: 20px;
+    line-height: 2;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #457d2e;
+    padding-left: 10px;
+}
+.btn-contact {
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    line-height: 2.22;
+    letter-spacing: 0.2em;
+    color: #fff;
+    background-color: #457d2e;
+    text-align: center;
+    align-content: center;
+    border-radius: 30px;
+    margin: 125px auto;
+}
+.white-contact {
+    background-color: white;
+    border: 1px solid #000;
+    color: #000;
+}
+/* フッターメニュー */
+.footer-menu ul {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    text-align: center;
+    padding-top: 128px;
+    padding-bottom: 128px;
+    gap: 117px;
+}
+/* タイトルにつけるチューリップのアイコン */
+.footer-menu img {
+    width: 43px;
+    height: 133px;
+}
+/* メニュータイトルの文字 */
+.footer-menu p {
+    font-size: 35px;
+    line-height: 1.77;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+.footer-menu {
+    background-color: #fcebec;
+}
+/* fotter */
+.footer {
+    background-color: #fe2e35;
+    text-align: center;
+}
+
+.footer__inner {
+    display: block;
+    position: relative;
+}
+.footer__inner p {
+    font-size: 15px;
+    line-height: 1.73;
+    color: #fff;
+}
+.footer__inner span {
+    font-weight: 700;
+}
+.footer__logo {
+    padding-top: 36px;
+    padding-bottom: 24px;
+}
+.copyright {
+    padding-top: 80px;
+    padding-bottom: 32px;
+    color: #fff;
+}
+.PAGETOP {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 75px;
+    height: 75px;
+    background-color: #fe2e35;
+    color: #fff;
+    align-content: center;
+}
+.pagetop__text p {
+    font-size: 18px;
+    color: #fff;
+}
+.pagetop__text span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    border: 2px solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    transform: translateY(25%) rotate(-45deg);
+}
+@media only screen and (min-width: 769px) {
+    .header__inner {
+        padding-left: 20px;
+    }
+    .header__inner .site__name {
+        margin-left: 1em;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .header__inner {
+        padding-left: 15px;
+    }
+    .header__inner .site__name {
+        display: none;
+    }
+}
+/* セクション毎にh3を指定していますが、フォントサイズがバラバラです。
+見出しタグを使う時は、合わせたほうがいいでしょうか  */
+/* ヘッダーのメニュー、WORKSの画像と赤いBOXに横並びの設定にしているためか、BOX内のテキストの表示がうまくいきません */
+/* 右上メニューを押した後、各メニューを選択したらメニュー画面を消す方法がわかりません */

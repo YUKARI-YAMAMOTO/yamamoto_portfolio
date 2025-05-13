@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #1a1a1a;
+    font-family: "Arial", "kozuka-gothic-pr6n", "游ゴシック", "YuGothic",
+        "Hiragino Sans ProN W3", "ヒラギノ角ゴシック ProN W3",
+        "Hiragino Kaku Gothic ProN", "HGゴシックE", "ＭＳ Ｐゴシック",
+        "ＭＳ ゴシック", sans-serif;
+    font-feature-settings: "palt";
+    font-weight: normal;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+/* img {
+    width: 100%;
+    vertical-align: bottom;
+    border: none;
+} */
