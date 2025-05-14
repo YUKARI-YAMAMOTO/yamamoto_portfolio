@@ -15,10 +15,10 @@
     position: absolute;
     top: 50%;
     right: 50%;
-    font-size: 84px;
+    /* font-size: 84px;
     font-weight: 800;
     line-height: 1.19;
-    letter-spacing: -12px;
+    letter-spacing: -12px; */
 }
 .header__left {
     position: fixed;
@@ -37,6 +37,13 @@
 /* ナビゲーションメニュー */
 .menu {
     display: none;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcebec;
 }
 .menu ul {
     display: flex;
@@ -55,19 +62,11 @@
 /* メニュータイトルの文字 */
 .menu p {
     font-size: 35px;
-    line-height: 1.77;
+    /* line-height: 1.77; */
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
-.menu {
-    position: absolute;
-    z-index: 9998;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #fcebec;
-}
+
 .hamburger {
     display: block;
     position: fixed;
@@ -150,7 +149,7 @@
 .concept__group {
     display: flex;
 }
-.concept__subtitle h3 {
+.hero__text {
     font-size: 40px;
     line-height: 1.5;
 }
@@ -193,7 +192,7 @@
 }
 .works__text p {
     font-size: 20px;
-    line-height: 1.75px;
+    line-height: 1.75;
     color: #fff;
 }
 .works__title {
@@ -264,7 +263,7 @@
 }
 
 /* SERVICE */
-.service__subtitle h3 {
+.service__subtitle p {
     font-size: 16px;
     line-height: 2.13;
 }

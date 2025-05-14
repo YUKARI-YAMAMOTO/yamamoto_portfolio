@@ -37,31 +37,7 @@
                 </a>
             </div>
             <h1 class="header__title">
-                <span class="char">Y</span>
-                <span class="char">U</span>
-                <span class="char">K</span>
-                <span class="char">A</span>
-                <span class="char">R</span>
-                <span class="char">I</span>
-                <br>
-                <span class="char">Y</span>
-                <span class="char">A</span>
-                <span class="char">M</span>
-                <span class="char">A</span>
-                <span class="char">M</span>
-                <span class="char">O</span>
-                <span class="char">T</span>
-                <span class="char">O</span>
-                <br>
-                <span class="char">P</span>
-                <span class="char">O</span>
-                <span class="char">R</span>
-                <span class="char">T</span>
-                <span class="char">F</span>
-                <span class="char">O</span>
-                <span class="char">L</span>
-                <span class="char">I</span>
-                <span class="char">O</span>
+                <img src="./images/header_title.png" alt="YUKARI YAMAMOTO PORTFOLIO">
             </h1>
         </div>
 
@@ -121,9 +97,9 @@
                         <img src="./images/turip_redS.png" alt="CONCEPT">
                     </h2>
                     <div class="concept__group">
-                        <div class="concept__subtitle">
-                            <h3>あなたの想いに、<br>
-                                そっと花束を。</h3>
+                        <div class="concept__title">
+                            <p class="hero__text">あなたの想いに、<br>
+                                そっと花束を。</p>
                         </div>
                         <div class="concept__text">
                             <h4>花のように、やさしく、美しく、彩りを添えるデザイン</h4>
@@ -153,7 +129,7 @@
                                 <a href="">
                                     <img src=" ./images/works-1.jpg" alt="web site">
                                     <div class="works__text">
-                                        <p class="works__title">カフェオープニング WEBサイトコーディング</p>
+                                        <p class="works__title">カフェオープニング<br>WEBサイトコーディング</p>
                                         <p class="works__more">もっと見る　 &gt;</p>
                                     </div>
                                 </a>
@@ -162,7 +138,7 @@
                                 <a href="">
                                     <img src="./images/works-2.jpg" alt="banner design">
                                     <div class="works__text">
-                                        <p class="works__title"> 新発売ハンバーガー バナーデザイン</p>
+                                        <p class="works__title"> 新発売ハンバーガー<br>バナーデザイン</p>
                                         <p class="works__more">もっと見る　 &gt;</p>
                                     </div>
                                 </a>
@@ -246,10 +222,10 @@
                     </h2>
                     <div class="service__group">
                         <div class="service__subtitle">
-                            <h3>Web、Graphicを問わずデザインをメインで承っておりますが、
+                            <p>Web、Graphicを問わずデザインをメインで承っておりますが、
                                 <br>UTAGE構築やエルメ（L Message）を使用したLINE構築のご依頼も可能です。
                                 <br>デザインからマーケティングまでお手伝いいたします。
-                            </h3>
+                            </p>
                         </div>
                         <div class="service__text">
                             <ul>
@@ -373,6 +349,11 @@
         $(function () {
             // ハンバーガーメニュー
             $(".hamburger").click(function () {
+                $(".hamburger").toggleClass("open");
+                $(".menu").fadeToggle();
+            });
+            // メニュー開閉
+            $(".menu").click(function () {
                 $(".hamburger").toggleClass("open");
                 $(".menu").fadeToggle();
             });
