@@ -1,0 +1,90 @@
+@charset "uft-8";
+/* WORKS */
+
+body {
+    background-image: url("../images/turip_back.jpeg");
+    background-color: rgba(255, 255, 255, 0.7);
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.section-workslist {
+    margin-top: 50px;
+    text-align: center;
+}
+.workslist__group .workslist__row ul {
+    padding-top: 100px;
+    display: flex;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 0 5%;
+    row-gap: 114px;
+}
+.workslist__item {
+    width: 300px;
+    height: 300px;
+    background-color: #fffef9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+.workslist__item img {
+    max-width: 90%;
+    max-height: 280px;
+    object-fit: contain;
+}
+.border {
+    border: 2px solid #f8f8f8;
+}
+.btn-toworks {
+    width: 134px;
+    height: 32px;
+    background-color: #fe2e35;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    display: flex;
+    margin: 180px auto 230px;
+}
+.white-toworks,
+.white-tocontact {
+    background-color: white;
+    border: 1px solid #000;
+    color: #000;
+}
+.to-contact p {
+    font-size: 20px;
+    line-height: 1.75;
+    text-align: center;
+}
+.btn-tocontact {
+    width: 134px;
+    height: 32px;
+    background-color: #fe2e35;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    margin: 40px auto 230px;
+    text-align: center;
+}
+.white-tocontact {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+.btn-tocontact:hover img {
+    content: url("../images/contact_mailb.png"); /* ホバー時の画像に切り替え */
+}
+.footer {
+    position: relative;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

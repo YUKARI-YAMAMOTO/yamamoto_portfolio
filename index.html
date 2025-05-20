@@ -45,7 +45,7 @@
             <div class="hamburger-text">
                 <span></span>
                 <span></span>
-                <p>MENU</p>
+                <p class="hamburger__open">MENU</p>
             </div>
         </div>
         <nav class="menu">
@@ -121,12 +121,12 @@
                         <img src="./images/turip_purple.png" alt="WORKS">
                     </h2>
                     <div class="btn-works">
-                        <a href="">制作実績一覧　 &gt; </a>
+                        <a href="./works.html">制作実績一覧　 &gt; </a>
                     </div>
                     <div class="works__group">
                         <ul>
                             <li class="works__item">
-                                <a href="">
+                                <a href="./works/works2.html">
                                     <img src=" ./images/works-1.jpg" alt="web site">
                                     <div class="works__text">
                                         <p class="works__title">カフェオープニング<br>WEBサイトコーディング</p>
@@ -135,7 +135,7 @@
                                 </a>
                             </li>
                             <li class="works__item">
-                                <a href="">
+                                <a href="./works/works4.html">
                                     <img src="./images/works-2.jpg" alt="banner design">
                                     <div class="works__text">
                                         <p class="works__title"> 新発売ハンバーガー<br>バナーデザイン</p>
@@ -144,7 +144,7 @@
                                 </a>
                             </li>
                             <li class="works__item">
-                                <a href="">
+                                <a href="./works/works7.html">
                                     <img src="./images/works-3.jpg" alt="flyer design">
                                     <div class="works__text">
                                         <p class="works__title">焼き鳥屋オープニング<br>チラシデザイン</p>
@@ -261,25 +261,38 @@
                         <p>CONTACT</p>
                         <img src="./images/turip_yellow.png" alt="CONTACT">
                     </h2>
+
                     <div class="contact__group">
                         <div class="contact__subtitle">
-                            <h3>最後までご覧いただきありがとうございます。
+                            <p>最後までご覧いただきありがとうございます。
                                 <br>お仕事のご依頼やご相談は下記フォームよりお願いいたします。
                                 <br>お気軽にお問い合わせください。
-                            </h3>
+                            </p>
                         </div>
-                        <div class="contact__text">
-                            <p class="contact__type">NAME</p>
-                            <p class="contact__name">例）田中　花子</p>
-                            <p class="contact__type">E-MAIL</p>
-                            <p class="contact__e-mail">例）example@gmail.com</p>
-                            <p class="contact__type">MESSAGE</p>
-                            <p class="contact__message">こちらにお問い合わせ内容をご入力くだください</p>
-                        </div>
-                        <div class="btn-contact">
-                            送信する
-                        </div>
+                        <form class="contact__form"
+                            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd62y-ENp0Lm9barTqgTOAj7pWGkO705qpEVqB_rM5uiMmj5A/formResponse?pli=1"
+                            method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+                            <div class="contact__text">
+                                <label class="contact__type" for="field-name">NAME</label>
+                                <input name="entry.701378076" class="contact__name" id="field-name"
+                                    placeholder="例）田中　花子" type="text" required="required" />
+                            </div>
+                            <div class="contact__text">
+                                <label class="contact__type" for="field-mail">E-MAIL</label>
+                                <input name="entry.949103186" class="contact__name" id="field-mail"
+                                    placeholder="例）example@gmail.com" type="email" required="required" />
+                            </div>
+                            <div class="contact__text">
+                                <label class="contact__type" for="field-message">MESSAGE</label>
+                                <textarea name="entry.588959967" class="contact__message" id="field-message"
+                                    placeholder="こちらにお問い合わせ内容をご入力くだください"></textarea>
+                            </div>
+                            <div class="btn-contact">
+                                <button type="submit">送信する</button>
+                            </div>
+                        </form>
                     </div>
+
                 </div>
             </section>
             <div class="footer-menu">
@@ -367,6 +380,12 @@
             });
         });
     </script>
+    <!-- Googl Form -->
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+        onload="if(submitted){window.location='./thanks.html';}"></iframe>
 </body>
 
 </html>

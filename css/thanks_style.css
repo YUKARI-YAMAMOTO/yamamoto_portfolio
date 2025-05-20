@@ -1,0 +1,18 @@
+@charset "uft-8";
+/* THANKS */
+body {
+    background-color: #fcebec;
+}
+
+.section-thanks {
+    margin: 200px 0 auto;
+    text-align: center;
+}
+.thanks__title p {
+    font-size: 100px;
+    padding-bottom: 80px;
+}
+.thanks__text p {
+    font-size: 19px;
+    line-height: 1.57;
+}

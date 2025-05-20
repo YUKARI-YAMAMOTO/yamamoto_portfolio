@@ -1,0 +1,79 @@
+@charset "uft-8";
+/* WORKS page */
+body {
+    background-image: none;
+    background-color: #eed8c8;
+}
+.section-workspage {
+    margin-top: 50px;
+}
+.toleft {
+    position: fixed;
+    top: 458px;
+    left: 10%;
+}
+.toright {
+    position: fixed;
+    top: 458px;
+    right: 10%;
+}
+.workspage {
+    display: flex;
+    margin-top: 20px;
+}
+.workspage img,
+.workspage__detail img {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+.workspage__img {
+    width: 55%;
+}
+.workspage__img img {
+    max-width: 500px;
+}
+.workspage__text {
+    padding-left: 80px;
+    margin-top: -16px;
+    width: 45%;
+}
+.workspage__text li {
+    display: flex;
+    gap: 41px;
+    border-bottom: 1px solid #000; /* 下線を追加 */
+    padding: 16px 0;
+}
+.workspage__text p {
+    font-size: 20px;
+    line-height: 1.88;
+}
+.works__type {
+    width: 100px;
+    text-align: justify;
+    text-align-last: justify;
+}
+.workspage__point {
+    text-align: justify;
+    padding-top: 16px;
+}
+.workspage__detail {
+    justify-content: center;
+    padding-top: 100px;
+    display: flex;
+    gap: 100px;
+}
+
+.btn-toworkslist {
+    width: 134px;
+    height: 32px;
+    background-color: #fe2e35;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    display: flex;
+    margin: 180px auto 230px;
+}
+.white-toworkslist {
+    background-color: white;
+    border: 1px solid #000;
+    color: #000;
+}
