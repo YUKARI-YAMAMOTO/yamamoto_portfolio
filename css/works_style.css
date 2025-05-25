@@ -10,6 +10,9 @@ body {
     width: 100vw;
     height: 100vh;
 }
+main {
+    margin-top: 0;
+}
 .section-workslist {
     margin-top: 50px;
     text-align: center;
@@ -23,9 +26,16 @@ body {
     gap: 0 5%;
     row-gap: 114px;
 }
+.workslist__item a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
 .workslist__item {
-    width: 300px;
-    height: 300px;
+    width: 30%;
+    aspect-ratio: 1/1;
     background-color: #fffef9;
     display: flex;
     justify-content: center;
@@ -35,8 +45,8 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 .workslist__item img {
-    max-width: 90%;
-    max-height: 280px;
+    max-width: 85%;
+    max-height: 260px;
     object-fit: contain;
 }
 .border {
@@ -46,17 +56,49 @@ body {
     width: 134px;
     height: 32px;
     background-color: #fe2e35;
+    border: 1px solid #fe2e35;
     font-size: 14px;
     line-height: 32px;
+    letter-spacing: 0.5em;
     color: #fff;
     display: flex;
     margin: 180px auto 230px;
+    position: relative;
+    display: inline-block;
 }
-.white-toworks,
-.white-tocontact {
-    background-color: white;
+.btn-toworks a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-toworks::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(225deg);
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+.white-toworks {
+    background-color: #fff;
     border: 1px solid #000;
     color: #000;
+}
+.white-toworks::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border-top: solid 2px #000;
+    border-right: solid 2px #000;
+    transform: rotate(225deg);
+    position: absolute;
+    top: 50%;
+    left: 14%;
 }
 .to-contact p {
     font-size: 20px;
@@ -67,6 +109,7 @@ body {
     width: 134px;
     height: 32px;
     background-color: #fe2e35;
+    border: 1px solid #fe2e35;
     font-size: 14px;
     line-height: 32px;
     color: #fff;

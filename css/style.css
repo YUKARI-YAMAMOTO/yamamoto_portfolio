@@ -1,6 +1,22 @@
 @charset "uft-8";
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+main {
+    margin-top: 800px;
+    position: relative;
+    z-index: 3;
+}
+footer {
+    position: relative;
+    z-index: 3;
+}
 .header__group {
     position: relative;
+    z-index: 9000;
 }
 .header__inner {
     position: fixed;
@@ -9,16 +25,19 @@
     align-items: center;
     padding-right: 75px;
     background-color: #fff;
-    z-index: 9000;
 }
 .header__title {
     position: absolute;
-    top: 50%;
+    top: 300px;
     right: 50%;
     /* font-size: 84px;
     font-weight: 800;
     line-height: 1.19;
     letter-spacing: -12px; */
+}
+.title__img {
+    mix-blend-mode: difference;
+    opacity: 0.5;
 }
 .header__left {
     position: fixed;
@@ -62,7 +81,6 @@
 /* メニュータイトルの文字 */
 .menu p {
     font-size: 35px;
-    /* line-height: 1.77; */
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
@@ -117,16 +135,36 @@
     transform: rotate(45deg);
     top: 20px;
 }
+/* 背景 */
 .main-visual {
     display: flex;
     justify-content: flex-end;
-    margin: 180px 75px auto auto;
+    position: fixed;
+    top: -20%;
+    /* left: 60%; */
+    transform: scale(0.5);
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.3s ease-out;
 }
-
-.main-visual img {
-    width: 70%;
+.background-img {
+    /* height: 100vh; */
+    width: 100vw;
+    object-fit: cover;
+    display: block;
 }
-
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+}
 /* セクションタイトル */
 .section__title {
     display: flex;
@@ -207,23 +245,69 @@
 
 .works__more {
     position: absolute;
-    bottom: 30px;
-    right: 16px;
+    bottom: 10%;
+    right: 14%;
+    display: inline-block;
 }
+.works__more::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: -20px;
+}
+
 .btn-works {
     width: 134px;
     height: 32px;
     font-size: 14px;
     line-height: 32px;
     background-color: #fe2e35;
+    border: 1px solid #fe2e35;
     text-align: center;
     align-content: center;
     color: #fff;
+    position: relative;
+    display: inline-block;
+}
+.btn-works a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-works::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
 }
 .white-works {
     background-color: white;
     border: 1px solid #000;
     color: #000;
+}
+.white-works::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    margin-top: -5px;
+    border-top: solid 2px #000;
+    border-right: solid 2px #000;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
 }
 
 /* SKILL */
@@ -269,7 +353,7 @@
 }
 .service__text ul {
     padding-top: 80px;
-    padding-left: 350px;
+    padding-left: 35%;
 }
 .service__text li {
     display: flex;
@@ -303,7 +387,7 @@
 }
 .contact__name,
 .contact__e-mail {
-    width: 800px;
+    width: 100%;
     height: 72px;
     font-size: 20px;
     line-height: 2;
@@ -312,9 +396,10 @@
     border: 1px solid #457d2e;
     align-content: center;
     padding-left: 10px;
+    box-sizing: border-box;
 }
 .contact__message {
-    width: 800px;
+    width: 100%;
     height: 184px;
     font-size: 20px;
     line-height: 2;
@@ -322,6 +407,7 @@
     background-color: #fff;
     border: 1px solid #457d2e;
     padding-left: 10px;
+    box-sizing: border-box;
 }
 
 .btn-contact {
@@ -373,7 +459,7 @@
 .footer {
     background-color: #fe2e35;
     text-align: center;
-    /* z-index: 9999; */
+    z-index: 9999;
 }
 
 .footer__inner {
@@ -426,6 +512,49 @@
     box-sizing: border-box;
     transform: translateY(25%) rotate(-45deg);
 }
+
+/* スマホのときだけ改行 */
+.br-sp {
+    display: none;
+}
+.br-pc {
+    display: block;
+}
+@media only screen and (max-width: 1130px) {
+    header {
+        position: relative;
+    }
+    .header__title {
+        right: auto;
+        left: 35px;
+    }
+    /* CONCEPT */
+    .concept__group {
+        flex-direction: column;
+    }
+    .concept__text {
+        padding-left: 0;
+        padding-top: 40px;
+    }
+    /* SKILL */
+    .section-skill {
+        flex-direction: column;
+    }
+    .skill__group {
+        margin-left: 0;
+    }
+    /* SERVICE */
+    .service__text ul {
+        padding-left: 20%;
+        padding-right: 10%;
+    }
+    /* MENU */
+    .menu ul,
+    .footer-menu ul {
+        gap: 50px;
+    }
+}
+
 @media only screen and (min-width: 769px) {
     .header__inner {
         padding-left: 20px;
@@ -435,14 +564,156 @@
     }
 }
 @media only screen and (max-width: 768px) {
+    /* スマホのときだけ改行 */
+    .br-sp {
+        display: block;
+    }
+    .br-pc {
+        display: none;
+    }
+    /* header    */
     .header__inner {
         padding-left: 15px;
     }
     .header__inner .site__name {
         display: none;
     }
+    .title__img {
+        width: 80%;
+        height: auto;
+    }
+    /* タイトルにつけるチューリップのアイコン */
+    .menu img,
+    .footer-menu img {
+        width: 22px;
+        height: 67px;
+    }
+    /* メニュータイトルの文字 */
+    .menu p,
+    .footer-menu p {
+        font-size: 18px;
+    }
+    /* セクションタイトル */
+    .section__title img {
+        width: 22px;
+        height: 67px;
+        padding-left: 8px;
+    }
+    .section__title p {
+        font-size: 48px;
+    }
+    .row {
+        padding: 50px 35px 100px;
+    }
+    /* CONCEPT */
+    .hero__text {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    .concept__text {
+        padding-left: 10px;
+        padding-top: 30px;
+    }
+    .concept__text h4 {
+        font-size: 20px;
+        line-height: 2;
+    }
+    .concept__text p {
+        font-size: 18px;
+        line-height: 2.33;
+        padding-top: 38px;
+    }
+    /* WORKS */
+    .works__group a {
+        flex-direction: column;
+    }
+    .works__group img {
+        width: 264px;
+        height: 264px;
+    }
+    .works__item {
+        width: 264px;
+        height: 418px;
+        margin: 0 auto;
+    }
+    .works__text {
+        width: 264px;
+        height: 154px;
+    }
+    .works__text p {
+        font-size: 16px;
+    }
+    .works__title {
+        left: 8%;
+    }
+    .btn-works {
+        width: 160px;
+        height: 36px;
+        font-size: 16px;
+        line-height: 36px;
+    }
+    /* SKILL */
+    .skill__group {
+        margin-top: 20px;
+        margin-left: 65px;
+    }
+    .skill__group ul {
+        padding-bottom: 32px;
+    }
+    .skill__type h3 {
+        font-size: 26px;
+    }
+    .skill__type p {
+        font-size: 10px;
+    }
+    .skill__type {
+        gap: 10px;
+    }
+    .skill__item p {
+        width: 78px;
+        font-size: 16px;
+    }
+    .skill__item {
+        gap: 30px;
+    }
+    /* SERVICE */
+    .service__text ul {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+    .service__text li {
+        flex-direction: column;
+        padding-bottom: 58px;
+        align-items: center;
+    }
+    .service__text p {
+        font-size: 14px;
+        line-height: 1.75;
+        padding-left: 0;
+        padding-top: 20px;
+        align-content: center;
+        display: block;
+        width: 60%;
+        text-align: justify;
+        text-align-last: left;
+    }
+    /* CONTACT */
+    .contact__subtitle p {
+        font-size: 14px;
+        line-height: 2;
+    }
+    .contact__text {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .contact__name,
+    .contact__e-mail,
+    .contact__message {
+        font-size: 14px;
+    }
+    /* footer */
+    .PAGETOP {
+        left: 0px;
+    }
 }
-/* セクション毎にh3を指定していますが、フォントサイズがバラバラです。
-見出しタグを使う時は、合わせたほうがいいでしょうか  */
-/* ヘッダーのメニュー、WORKSの画像と赤いBOXに横並びの設定にしているためか、BOX内のテキストの表示がうまくいきません */
-/* 右上メニューを押した後、各メニューを選択したらメニュー画面を消す方法がわかりません */

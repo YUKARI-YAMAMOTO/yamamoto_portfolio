@@ -37,7 +37,7 @@
                 </a>
             </div>
             <h1 class="header__title">
-                <img src="./images/header_title.png" alt="YUKARI YAMAMOTO PORTFOLIO">
+                <img src="./images/header_title.png" class="title__img" alt="YUKARI YAMAMOTO PORTFOLIO">
             </h1>
         </div>
 
@@ -83,9 +83,14 @@
             </ul>
         </nav>
         <!-- 背景 -->
-        <div class="main-visual">
-            <img src="./images/turip_back.jpeg" alt="TURIP" />
+        <div class="main-visual" id="bgWrapper">
+            <picture>
+                <source srcset="./images/turip_back-sp.jpg" media="(max-width:1130px)" />
+                <img src="./images/turip_back.jpeg" class="background-img" alt="TURIP" />
+            </picture>
         </div>
+
+        <div class="overlay" id="overlay"></div>
     </header>
     <main>
         <div class="main">
@@ -102,11 +107,11 @@
                                 そっと花束を。</p>
                         </div>
                         <div class="concept__text">
-                            <h4>花のように、やさしく、美しく、彩りを添えるデザイン</h4>
+                            <h4>花のように、やさしく、美しく、<br class="br-sp">彩りを添えるデザイン</h4>
                             <p>何気ない日々に、やさしく咲く花のように。
-                                <br>想いの中にある「伝えたい」を丁寧にすくいあげ、
-                                <br>言葉では伝えきれない想いに、そっと花を添えます。
-                                <br>やわらかく、でも確かに心に届く、そんなデザインをお届けします。
+                                <br>想いの中にある「伝えたい」を<br class="br-sp">丁寧にすくいあげ、
+                                <br>言葉では伝えきれない想いに、<br class="br-sp">そっと花を添えます。
+                                <br>やわらかく、でも確かに心に届く、<br class="br-sp">そんなデザインをお届けします。
                             </p>
                         </div>
                     </div>
@@ -121,7 +126,7 @@
                         <img src="./images/turip_purple.png" alt="WORKS">
                     </h2>
                     <div class="btn-works">
-                        <a href="./works.html">制作実績一覧　 &gt; </a>
+                        <a href="./works.html">制作実績一覧 </a>
                     </div>
                     <div class="works__group">
                         <ul>
@@ -130,7 +135,7 @@
                                     <img src=" ./images/works-1.jpg" alt="web site">
                                     <div class="works__text">
                                         <p class="works__title">カフェオープニング<br>WEBサイトコーディング</p>
-                                        <p class="works__more">もっと見る　 &gt;</p>
+                                        <p class="works__more">もっと見る</p>
                                     </div>
                                 </a>
                             </li>
@@ -139,7 +144,7 @@
                                     <img src="./images/works-2.jpg" alt="banner design">
                                     <div class="works__text">
                                         <p class="works__title"> 新発売ハンバーガー<br>バナーデザイン</p>
-                                        <p class="works__more">もっと見る　 &gt;</p>
+                                        <p class="works__more">もっと見る</p>
                                     </div>
                                 </a>
                             </li>
@@ -148,7 +153,7 @@
                                     <img src="./images/works-3.jpg" alt="flyer design">
                                     <div class="works__text">
                                         <p class="works__title">焼き鳥屋オープニング<br>チラシデザイン</p>
-                                        <p class="works__more">もっと見る　 &gt;</p>
+                                        <p class="works__more">もっと見る</p>
                                     </div>
                                 </a>
                             </li>
@@ -222,8 +227,8 @@
                     </h2>
                     <div class="service__group">
                         <div class="service__subtitle">
-                            <p>Web、Graphicを問わずデザインをメインで承っておりますが、
-                                <br>UTAGE構築やエルメ（L Message）を使用したLINE構築のご依頼も可能です。
+                            <p>Web、Graphicを問わずデザインをメインで<br class="br-sp">承っておりますが、
+                                <br class="br-pc">UTAGE構築やエルメ（L Message）を<br class="br-sp">使用したLINE構築のご依頼も可能です。
                                 <br>デザインからマーケティングまでお手伝いいたします。
                             </p>
                         </div>
@@ -232,7 +237,7 @@
                                 <li>
                                     <img src="./images/service-1.png" alt="WEB DESIGN">
                                     <p>バナーやLP、コーポレートサイト等、目的達成や問題解決
-                                        <br>のためのデザインをさせていただきます。
+                                        のためのデザインをさせていただきます。
                                         <br>お客様の届けたい想いをカタチにし、デザインでお届けいたします。
                                     </p>
                                 </li>
@@ -380,6 +385,41 @@
             });
         });
     </script>
+    <!-- <script>
+        // 背景ズーム＆フェード 拡大止める
+        const bgWrapper = document.getElementById('bgWrapper');
+        const overlay = document.getElementById('overlay');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+
+            const zoomEndScroll = 1000;
+            const zoomProgress = Math.min(scrollTop / zoomEndScroll, 1); // 0〜1
+            const scale = 0.5 + (zoomProgress * 0.5); // 0.5 → 1.0
+
+            bgWrapper.style.transform = `scale(${scale})`;
+
+            // フェードはページ全体のスクロールで制御
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+            const opacity = Math.min(scrollTop / 5000, 1);
+            overlay.style.opacity = opacity;
+        });
+    </script> -->
+    <script>
+        // 背景ズーム＆フェード 拡大止めない
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+            const scale = 0.5 + Math.min(scrollTop / maxScroll, 1) * 2;
+            document.getElementById('bgWrapper').style.transform = `scale(${scale})`;
+
+            // フェードはページ全体のスクロールで制御
+            const opacity = Math.min(scrollTop / 4000, 1);
+            overlay.style.opacity = opacity;
+        });
+    </script>
+
     <!-- Googl Form -->
     <script type="text/javascript">
         let submitted = false;

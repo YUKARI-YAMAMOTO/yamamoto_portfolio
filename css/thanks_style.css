@@ -3,7 +3,9 @@
 body {
     background-color: #fcebec;
 }
-
+main {
+    margin-top: 0;
+}
 .section-thanks {
     margin: 200px 0 auto;
     text-align: center;
@@ -15,4 +17,24 @@ body {
 .thanks__text p {
     font-size: 19px;
     line-height: 1.57;
+}
+.br-sp {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    /* スマホのときだけ改行 */
+    .br-sp {
+        display: block;
+    }
+    .section-thanks {
+        margin: 100px 0 auto;
+    }
+    .thanks__title p {
+        font-size: 48px;
+        padding-bottom: 50px;
+    }
+    .thanks__img img {
+        width: 317px;
+        height: 238px;
+    }
 }
