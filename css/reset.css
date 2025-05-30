@@ -35,10 +35,6 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
-    opacity: 0.7;
-}
-
 ul {
     /*左の「・」を消す*/
     list-style: none;

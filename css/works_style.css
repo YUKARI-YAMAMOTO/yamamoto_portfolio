@@ -17,7 +17,8 @@ main {
     margin-top: 50px;
     text-align: center;
 }
-.workslist__group .workslist__row ul {
+/* .workslist__group .workslist__row ul { */
+.workslist__group ul {
     padding-top: 100px;
     display: flex;
     max-width: 1000px;
@@ -46,8 +47,11 @@ main {
 }
 .workslist__item img {
     max-width: 85%;
-    max-height: 260px;
+    max-height: 85%;
     object-fit: contain;
+}
+.workslist__item a:hover {
+    opacity: 0.7;
 }
 .border {
     border: 2px solid #f8f8f8;
@@ -130,4 +134,43 @@ main {
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+@media only screen and (max-width: 1130px) {
+    .workslist__group ul {
+        padding-top: 50px;
+        row-gap: 50px;
+    }
+    .workslist__item {
+        width: 38%;
+    }
+    ul {
+        justify-content: center;
+    }
+    .btn-toworks {
+        width: 160px;
+        height: 38px;
+        font-size: 16px;
+        line-height: 38px;
+        margin: 150px auto 130px;
+    }
+    .to-contact p {
+        font-size: 18px;
+        line-height: 1.75;
+        text-align: center;
+    }
+    .btn-tocontact {
+        width: 160px;
+        height: 38px;
+        font-size: 16px;
+        line-height: 38px;
+        margin-bottom: 130px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .workslist__group ul {
+        padding-top: 15%;
+        gap: 0 10%;
+        row-gap: 30px;
+    }
 }

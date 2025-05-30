@@ -10,15 +10,18 @@ main {
 .section-workspage {
     margin-top: 50px;
 }
-.toleft {
-    position: fixed;
-    top: 458px;
-    left: 10%;
-}
+.toleft,
 .toright {
     position: fixed;
+    width: 40px;
+    height: 40px;
     top: 458px;
-    right: 10%;
+}
+.toleft {
+    left: 1%;
+}
+.toright {
+    right: 1%;
 }
 .workspage {
     display: flex;
@@ -39,6 +42,13 @@ main {
     padding-left: 80px;
     margin-top: -16px;
     width: 45%;
+}
+.workspage__img p {
+    font-size: 18px;
+    padding-top: 70px;
+}
+.workspage__img a {
+    text-decoration: underline;
 }
 .workspage__text li {
     display: flex;
@@ -63,9 +73,11 @@ main {
     justify-content: center;
     padding-top: 100px;
     display: flex;
-    gap: 100px;
+    gap: 10%;
 }
-
+.workspage__detail img {
+    width: 100%;
+}
 .btn-toworkslist {
     width: 134px;
     height: 32px;
@@ -113,4 +125,44 @@ main {
     position: absolute;
     top: 50%;
     left: 14%;
+}
+@media only screen and (max-width: 1200px) {
+    .toleft,
+    .toright {
+        position: fixed;
+        width: 30px;
+        height: 30px;
+    }
+    .workspage__text {
+        padding-left: 40px;
+    }
+    .workspage__text li {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .workspage {
+        flex-direction: column;
+    }
+    .workspage__img {
+        width: 100%;
+        text-align: center;
+    }
+    .workspage__text {
+        padding-left: 0;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .workspage__text li {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .workspage__img p {
+        padding-top: 30px;
+    }
+    .toleft,
+    .toright {
+        display: none;
+    }
 }
